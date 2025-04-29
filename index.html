@@ -1,1 +1,65 @@
-
+<!DOCTYPE html><html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Só Jogo Moz</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function toggleModal(id) {
+      const modal = document.getElementById(id);
+      modal.classList.toggle('hidden');
+    }
+  </script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Cabeçalho -->
+  <header class="bg-black p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-green-500">Só Jogo Moz</h1>
+    <div>
+      <button onclick="toggleModal('loginModal')" class="bg-green-500 px-4 py-2 rounded mr-2">Entrar</button>
+      <button onclick="toggleModal('signupModal')" class="bg-white text-black px-4 py-2 rounded">Cadastrar</button>
+    </div>
+  </header>  <!-- Menu de Navegação -->  <nav class="bg-gray-800 p-2 flex space-x-4 text-sm justify-center">
+    <a href="#" class="hover:text-green-400">Esportes</a>
+    <a href="#" class="hover:text-green-400">Ao Vivo</a>
+    <a href="#" class="hover:text-green-400">Cassino</a>
+    <a href="#" class="hover:text-green-400">Promoções</a>
+    <a href="#" class="hover:text-green-400">Ajuda</a>
+  </nav>  <!-- Banner Promocional -->  <section class="bg-green-600 p-6 text-center">
+    <h2 class="text-3xl font-bold">Bem-vindo ao Só Jogo Moz!</h2>
+    <p class="mt-2">As melhores apostas esportivas de Moçambique estão aqui!</p>
+  </section>  <!-- Lista de Jogos -->  <main class="p-6">
+    <h3 class="text-xl font-semibold mb-4">Eventos ao Vivo</h3>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="bg-gray-800 p-4 rounded shadow">
+        <p class="font-bold">Barcelona vs Real Madrid</p>
+        <p class="text-sm text-gray-400">La Liga - 18:00</p>
+        <div class="mt-2 flex justify-between">
+          <span>1.90</span><span>Empate 3.00</span><span>2.20</span>
+        </div>
+      </div>
+    </div>
+  </main>  <!-- Modal Login -->  <div id="loginModal" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+    <div class="bg-white text-black p-6 rounded-lg w-80">
+      <h2 class="text-xl font-bold mb-4">Entrar</h2>
+      <input type="text" placeholder="Usuário ou Email" class="w-full mb-2 p-2 border rounded">
+      <input type="password" placeholder="Senha" class="w-full mb-4 p-2 border rounded">
+      <button class="bg-green-500 w-full py-2 text-white rounded">Entrar</button>
+      <p class="text-sm text-center mt-4">Não tem conta? <a href="#" onclick="toggleModal('loginModal'); toggleModal('signupModal')" class="text-blue-600">Cadastre-se</a></p>
+      <button onclick="toggleModal('loginModal')" class="text-red-600 text-sm mt-4 block mx-auto">Fechar</button>
+    </div>
+  </div>  <!-- Modal Cadastro -->  <div id="signupModal" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+    <div class="bg-white text-black p-6 rounded-lg w-80">
+      <h2 class="text-xl font-bold mb-4">Cadastrar</h2>
+      <input type="text" placeholder="Nome completo" class="w-full mb-2 p-2 border rounded">
+      <input type="email" placeholder="Email" class="w-full mb-2 p-2 border rounded">
+      <input type="password" placeholder="Senha" class="w-full mb-2 p-2 border rounded">
+      <button class="bg-green-500 w-full py-2 text-white rounded">Criar Conta</button>
+      <p class="text-sm text-center mt-4">Já tem conta? <a href="#" onclick="toggleModal('signupModal'); toggleModal('loginModal')" class="text-blue-600">Entrar</a></p>
+      <button onclick="toggleModal('signupModal')" class="text-red-600 text-sm mt-4 block mx-auto">Fechar</button>
+    </div>
+  </div>  <!-- Rodapé -->  <footer class="bg-black p-4 text-center text-sm text-gray-400">
+    &copy; 2025 Só Jogo Moz. Todos os direitos reservados.
+  </footer>
+</body> 
+</html>
